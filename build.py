@@ -489,7 +489,7 @@ def write_feed(cfg, episodes, manifest):
     </item>""")
     image = ""
     for name in ("cover.jpg", "cover.png"):
-        if (ROOT / name).exists():
+        if (FEED_PATH.parent / name).exists():
             image = f'\n    <itunes:image href="{e(base + "/" + name)}"/>'
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -531,9 +531,15 @@ def main():
     ap.add_argument("--estimate", action="store_true", help="only show the cost estimate")
     ap.add_argument("--yes", "-y", action="store_true", help="don't ask for confirmation")
     ap.add_argument("--feed-only", action="store_true", help="skip audio, just rebuild feed.xml")
+    ap.add_argument("--subject", metavar="DIR", help="build the show in this subfolder (own scripts, episodes, config, feed)")
     ap.add_argument("--only", nargs="+", metavar="SLUG", help="only generate these episodes (script names without .md)")
     ap.add_argument("--publish", action="store_true", help="git commit + push after building")
     args = ap.parse_args()
+    if args.subject:
+        global SCRIPTS_DIR, EPISODES_DIR, PARTS_DIR, CONFIG_PATH, MANIFEST_PATH, FEED_PATH
+        base = ROOT / args.subject
+        SCRIPTS_DIR, EPISODES_DIR, PARTS_DIR = base / "scripts", base / "episodes", base / ".parts"
+        CONFIG_PATH, MANIFEST_PATH, FEED_PATH = base / "config.json", base / "episodes" / "manifest.json", base / "feed.xml"
 
     cfg = load_config()
     if not CONFIG_PATH.exists():
