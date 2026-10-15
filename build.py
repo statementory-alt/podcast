@@ -303,7 +303,24 @@ def strip_tags(data):
         data = data[10 + size:]
     if len(data) > 128 and data[-128:-125] == b"TAG":
         data = data[:-128]
+    # Drop a leading Xing/Info frame: it states the length of this chunk only, which makes
+    # players report the length of the first chunk for the whole joined episode.
+    if len(data) > 4 and data[0] == 0xFF and (data[1] & 0xE0) == 0xE0 and \
+            (b"Xing" in data[4:64] or b"Info" in data[4:64]):
+        flen = _frame_len(data)
+        if flen:
+            data = data[flen:]
     return data
+
+
+def _frame_len(data):
+    ver, layer = (data[1] >> 3) & 3, (data[1] >> 1) & 3
+    br_idx, sr_idx, pad = data[2] >> 4, (data[2] >> 2) & 3, (data[2] >> 1) & 1
+    if ver == 1 or layer != 1 or br_idx in (0, 15) or sr_idx == 3:
+        return 0
+    mpeg1 = ver == 3
+    br = _BITRATES[1 if mpeg1 else 2][br_idx] * 1000
+    return (144 if mpeg1 else 72) * br // _RATES[ver][sr_idx] + pad
 
 
 def mp3_duration(data):
