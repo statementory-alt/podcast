@@ -55,7 +55,7 @@ DEFAULT_CONFIG = {
 
 # ---------------------------------------------------------------- config / env
 
-def load_env():
+def load_env(provider="elevenlabs"):
     env_path = ROOT / ".env"
     if env_path.exists():
         for line in env_path.read_text().splitlines():
@@ -64,10 +64,46 @@ def load_env():
                 continue
             k, v = line.split("=", 1)
             os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    if provider == "fish":
+        key = os.environ.get("FISH_API_KEY")
+        if not key:
+            sys.exit("Missing FISH_API_KEY in .env")
+        return key
     key = os.environ.get("ELEVENLABS_API_KEY") or os.environ.get("XI_API_KEY")
     if not key:
         sys.exit("Missing ELEVENLABS_API_KEY in .env")
     return key
+
+
+FISH_API = "https://api.fish.audio/v1/tts"
+FISH_USD_PER_MB = 15.0  # $ per million UTF-8 bytes of input text (s2-pro)
+
+
+def fish_tts(key, text, voices, model, speed, retries=3):
+    body = json.dumps({"text": text, "reference_id": voices, "format": "mp3",
+                       "mp3_bitrate": 128, "prosody": {"speed": speed}}).encode()
+    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json", "model": model}
+    for attempt in range(retries + 1):
+        req = urllib.request.Request(FISH_API, data=body, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=300, context=SSL_CTX) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode(errors="replace")[:500]
+            if e.code in (429, 500, 502, 503, 504) and attempt < retries:
+                time.sleep(2 ** (attempt + 1))
+                continue
+            sys.exit(f"Fish Audio API error {e.code}: {detail}")
+        except urllib.error.URLError as e:
+            if attempt < retries:
+                time.sleep(2 ** (attempt + 1))
+                continue
+            sys.exit(f"Network error calling Fish Audio: {e.reason}")
+
+
+def fish_text(chunk):
+    # Fish S2 multi-speaker: <|speaker:N|> switches to reference_id[N].
+    return " ".join(f"<|speaker:{0 if s == 'A' else 1}|>{t}" for s, t in chunk)
 
 
 def load_config():
@@ -391,11 +427,16 @@ def generate_episode(key, cfg, ep, model_id):
         if chunk[0][0] == "P":
             audio.append(silence(float(chunk[0][1])))
             continue
-        body = {
-            "inputs": [{"text": t, "voice_id": voice[s]} for s, t in chunk],
-            "model_id": model_id,
-            "settings": {"stability": stability},
-        }
+        if cfg.get("provider") == "fish":
+            fc = cfg["fish"]
+            body = {"provider": "fish", "text": fish_text(chunk), "voices": fc["voices"],
+                    "model": fc.get("model", "s2-pro"), "speed": fc.get("speed", 1.0)}
+        else:
+            body = {
+                "inputs": [{"text": t, "voice_id": voice[s]} for s, t in chunk],
+                "model_id": model_id,
+                "settings": {"stability": stability},
+            }
         # Cache each chunk by its content so an interrupted run resumes for free.
         h = hashlib.sha1(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
         part = part_dir / f"{idx:03d}-{h}.mp3"
@@ -404,8 +445,11 @@ def generate_episode(key, cfg, ep, model_id):
         else:
             print(f"    chunk {idx}/{len(chunks)} ({spoken_chars(chunk)} chars)...",
                   flush=True)
-            data, _ = api(key, "POST", "/v1/text-to-dialogue", body=body,
-                                query={"output_format": OUTPUT_FORMAT}, raw=True)
+            if body.get("provider") == "fish":
+                data = fish_tts(key, body["text"], body["voices"], body["model"], body["speed"])
+            else:
+                data, _ = api(key, "POST", "/v1/text-to-dialogue", body=body,
+                              query={"output_format": OUTPUT_FORMAT}, raw=True)
             part.write_bytes(data)
         audio.append(strip_tags(part.read_bytes()))
     out = EPISODES_DIR / f"{ep['slug']}.mp3"
@@ -510,8 +554,9 @@ def main():
     manifest = json.loads(MANIFEST_PATH.read_text()) if MANIFEST_PATH.exists() else {}
 
     if not args.feed_only:
-        key = load_env()
-        if not (cfg["host_a"]["voice_id"] and cfg["host_b"]["voice_id"]):
+        provider = cfg.get("provider", "elevenlabs")
+        key = load_env(provider)
+        if provider != "fish" and not (cfg["host_a"]["voice_id"] and cfg["host_b"]["voice_id"]):
             if not choose_voices(key, cfg):
                 return
 
@@ -519,22 +564,35 @@ def main():
         if args.only:
             todo = [ep for ep in todo if ep["slug"] in args.only]
         if todo:
-            model_id, mult = pick_model(key, cfg)
-            print(f"\nModel: {model_id}   Host A: {cfg['host_a']['name'] or cfg['host_a']['voice_id']}"
-                  f"   Host B: {cfg['host_b']['name'] or cfg['host_b']['voice_id']}\n")
+            if provider == "fish":
+                fc = cfg["fish"]
+                model_id, mult = fc.get("model", "s2-pro"), None
+                print(f"\nFish Audio {model_id}   Host A: {fc.get('names', ['', ''])[0]}"
+                      f"   Host B: {fc.get('names', ['', ''])[1]}   speed {fc.get('speed', 1.0)}\n")
+            else:
+                model_id, mult = pick_model(key, cfg)
+                print(f"\nModel: {model_id}   Host A: {cfg['host_a']['name'] or cfg['host_a']['voice_id']}"
+                      f"   Host B: {cfg['host_b']['name'] or cfg['host_b']['voice_id']}\n")
             total = 0
             for ep in todo:
                 chars = spoken_chars(ep["turns"])
                 total += chars
                 print(f"  {ep['slug']:<32} {chars:>7,} chars  {sum(c[0][0] != 'P' for c in chunk_turns(ep['turns'])):>3} chunks")
-            credits = int(total * mult)
-            print(f"\n  Total: {total:,} characters  ≈ {credits:,} credits "
-                  f"(at {mult:g} credit/char)")
-            try:
+            if provider == "fish":
+                nbytes = sum(len(fish_text(c).encode()) for ep in todo
+                             for c in chunk_turns(ep["turns"]) if c[0][0] != "P")
+                print(f"\n  Total: {total:,} characters ({nbytes:,} bytes)  ≈ "
+                      f"${nbytes * FISH_USD_PER_MB / 1e6:.2f} at ${FISH_USD_PER_MB:g} per million bytes")
+            else:
+                credits = int(total * mult)
+                print(f"\n  Total: {total:,} characters  ≈ {credits:,} credits "
+                      f"(at {mult:g} credit/char)")
+            if provider != "fish":
+              try:
                 sub = api(key, "GET", "/v1/user/subscription", fatal=False)
                 left = sub["character_limit"] - sub["character_count"]
                 print(f"  Remaining in your plan: {left:,} credits ({sub.get('tier', '')})")
-            except RuntimeError:
+              except RuntimeError:
                 print("  (Remaining credits unknown: this API key can't read your subscription.)")
             if args.estimate:
                 return
