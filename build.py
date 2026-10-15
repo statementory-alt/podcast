@@ -250,6 +250,10 @@ def parse_script(path):
         or f"Episode {int(num)}",
         "episode": int(num),
         "turns": turns,
+        # optional per-script overrides, e.g. for voice tests
+        "voice_a": meta.get("host_a_voice"),
+        "voice_b": meta.get("host_b_voice"),
+        "stability": float(meta["stability"]) if "stability" in meta else None,
     }
 
 
@@ -356,7 +360,9 @@ def hms(sec):
 # ---------------------------------------------------------------- generation
 
 def generate_episode(key, cfg, ep, model_id):
-    voice = {"A": cfg["host_a"]["voice_id"], "B": cfg["host_b"]["voice_id"]}
+    voice = {"A": ep.get("voice_a") or cfg["host_a"]["voice_id"],
+             "B": ep.get("voice_b") or cfg["host_b"]["voice_id"]}
+    stability = ep["stability"] if ep.get("stability") is not None else cfg.get("stability", 0.5)
     chunks = chunk_turns(ep["turns"])
     part_dir = PARTS_DIR / ep["slug"]
     part_dir.mkdir(parents=True, exist_ok=True)
@@ -365,7 +371,7 @@ def generate_episode(key, cfg, ep, model_id):
         body = {
             "inputs": [{"text": t, "voice_id": voice[s]} for s, t in chunk],
             "model_id": model_id,
-            "settings": {"stability": cfg.get("stability", 0.5)},
+            "settings": {"stability": stability},
         }
         # Cache each chunk by its content so an interrupted run resumes for free.
         h = hashlib.sha1(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
