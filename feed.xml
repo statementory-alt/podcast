@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Political Science A · Study Podcast</title>
+    <link>https://statementory-alt.github.io/polisci-podcast</link>
+    <atom:link href="https://statementory-alt.github.io/polisci-podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Two-host study episodes for Political Science A (HSG, Autumn 2026): lectures, readings, self-assessment questions and DLUs.</description>
+    <language>en</language>
+    <itunes:author>Adrián</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>Episode 1 · What Is Politics?</title>
+      <description>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</description>
+      <itunes:summary>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</itunes:summary>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:19:52</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/polisci-podcast/episodes/polisci-01-politics.mp3" length="19076478" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-01-politics</guid>
+      <pubDate>Thu, 15 Oct 2026 13:25:26 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

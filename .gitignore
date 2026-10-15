@@ -1,0 +1,7 @@
+.env
+.parts/
+__pycache__/
+.DS_Store
+# course materials and personal notes stay off the public site
+sources/
+study-guide/

@@ -1,0 +1,17 @@
+{
+  "podcast_title": "Political Science A · Study Podcast",
+  "podcast_description": "Two-host study episodes for Political Science A (HSG, Autumn 2026): lectures, readings, self-assessment questions and DLUs.",
+  "author": "Adrián",
+  "language": "en",
+  "base_url": "https://statementory-alt.github.io/polisci-podcast",
+  "host_a": {
+    "name": "Quentin - Narrator and Educator",
+    "voice_id": "Aa6nEBJJMKJwJkCx8VU2"
+  },
+  "host_b": {
+    "name": "Vanessa Voyce - Warm & Relatable",
+    "voice_id": "9BYUod15YOH2aePSd97v"
+  },
+  "model_id": "",
+  "stability": 0.5
+}
