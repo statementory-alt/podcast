@@ -10,6 +10,60 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:block>Yes</itunes:block>
-
+    <item>
+      <title>Episode 5 · DLU 1 · Arendt, Lobbying and Your Idea</title>
+      <description>Digital Learning Unit 1 in plain language. Hannah Arendt&#x27;s On Violence (power, strength, force, authority, violence), the Swiss lobbying report, the practitioner interviews, and how to write your 600-word proposal for future generations. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Digital Learning Unit 1 in plain language. Hannah Arendt&#x27;s On Violence (power, strength, force, authority, violence), the Swiss lobbying report, the practitioner interviews, and how to write your 600-word proposal for future generations. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>5</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:09:18</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-05-dlu1-arendt.mp3" length="8932097" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-05-dlu1-arendt</guid>
+      <pubDate>Thu, 15 Oct 2026 14:25:56 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 4 · Institutions</title>
+      <description>Lecture 4 of Political Science A in plain language. Göhler&#x27;s three conditions for an institution, formal and informal rules, steering and integration, the three ways of explaining institutions, how the world got from Kyoto to Paris, and why US climate policy stays weak. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Lecture 4 of Political Science A in plain language. Göhler&#x27;s three conditions for an institution, formal and informal rules, steering and integration, the three ways of explaining institutions, how the world got from Kyoto to Paris, and why US climate policy stays weak. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:08:37</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-04-institutions.mp3" length="8268169" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-04-institutions</guid>
+      <pubDate>Thu, 15 Oct 2026 14:23:21 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 3 · Ideology</title>
+      <description>Lecture 3 of Political Science A in plain language. Three meanings of &quot;ideology&quot;, Lukes&#x27; three faces of power, Marx and Adorno, Heywood&#x27;s definition, how ideologies are built, and how liberalism, conservatism and socialism each see the climate crisis. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Lecture 3 of Political Science A in plain language. Three meanings of &quot;ideology&quot;, Lukes&#x27; three faces of power, Marx and Adorno, Heywood&#x27;s definition, how ideologies are built, and how liberalism, conservatism and socialism each see the climate crisis. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:08:58</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-03-ideology.mp3" length="8605596" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-03-ideology</guid>
+      <pubDate>Thu, 15 Oct 2026 14:21:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 2 · Power</title>
+      <description>Lecture 2 of Political Science A in plain language. Weber&#x27;s definition of power, Popitz&#x27;s three big ideas and four kinds of power, the climate examples from class, Arendt&#x27;s &quot;power to&quot;, and Foucault. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Lecture 2 of Political Science A in plain language. Weber&#x27;s definition of power, Popitz&#x27;s three big ideas and four kinds of power, the climate examples from class, Arendt&#x27;s &quot;power to&quot;, and Foucault. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:08:00</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-02-power.mp3" length="7673599" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-02-power</guid>
+      <pubDate>Thu, 15 Oct 2026 14:18:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 1 · What Is Politics?</title>
+      <description>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</description>
+      <itunes:summary>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</itunes:summary>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:19:52</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-01-politics.mp3" length="19072308" type="audio/mpeg"/>
+      <guid isPermaLink="false">polisci-01-politics</guid>
+      <pubDate>Thu, 15 Oct 2026 13:25:26 GMT</pubDate>
+    </item>
   </channel>
 </rss>

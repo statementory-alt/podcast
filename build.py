@@ -204,6 +204,7 @@ def pick_model(key, cfg):
 
 # ---------------------------------------------------------------- scripts
 
+PAUSE_RE = re.compile(r"^\s*PAUSE\s*:\s*(\d+(?:\.\d+)?)\s*$", re.I)
 HOST_RE = re.compile(r"^\s*[*_]*\s*HOST\s+([AB])\s*[*_]*\s*:\s*[*_]*\s*(.*)$", re.I)
 
 
@@ -227,8 +228,11 @@ def parse_script(path):
 
     turns, intro, title = [], [], None
     for line in raw.splitlines():
+        pm = PAUSE_RE.match(line)
         hm = HOST_RE.match(line)
-        if hm:
+        if pm:
+            turns.append(["P", pm.group(1)])  # silence, e.g. time to answer a quiz question
+        elif hm:
             turns.append([hm.group(1).upper(), hm.group(2)])
         elif line.lstrip().startswith("#"):
             if title is None:
@@ -237,7 +241,7 @@ def parse_script(path):
             turns[-1][1] += " " + line.strip()  # continuation of the previous turn
         elif not turns and line.strip():
             intro.append(line.strip())
-    turns = [(s, clean_md(t)) for s, t in turns if clean_md(t)]
+    turns = [(s, t if s == "P" else clean_md(t)) for s, t in turns if clean_md(t)]
 
     num = meta.get("episode")
     if not num:
@@ -275,13 +279,23 @@ def split_long(text, limit):
     return parts
 
 
+def spoken_chars(turns):
+    return sum(len(t) for s, t in turns if s != "P")
+
+
 def chunk_turns(turns, limit=CHUNK_LIMIT):
     pieces = []
     for spk, text in turns:
-        for p in split_long(text, limit):
+        for p in ([text] if spk == "P" else split_long(text, limit)):
             pieces.append((spk, p))
     chunks, cur, size = [], [], 0
     for spk, text in pieces:
+        if spk == "P":  # a pause is its own silent segment between API requests
+            if cur:
+                chunks.append(cur)
+            chunks.append([(spk, text)])
+            cur, size = [], 0
+            continue
         if cur and size + len(text) > limit:
             chunks.append(cur)
             cur, size = [], 0
@@ -352,6 +366,12 @@ def mp3_duration(data):
     return seconds
 
 
+def silence(seconds):
+    # Silent MPEG-1 Layer III frames matching ElevenLabs' mp3_44100_128 mono output.
+    frame = bytes([0xFF, 0xFB, 0x90, 0xC4]) + bytes(417 - 4)
+    return frame * int(round(seconds * 44100 / 1152))
+
+
 def hms(sec):
     sec = int(round(sec))
     return f"{sec // 3600:d}:{sec % 3600 // 60:02d}:{sec % 60:02d}"
@@ -368,6 +388,9 @@ def generate_episode(key, cfg, ep, model_id):
     part_dir.mkdir(parents=True, exist_ok=True)
     audio = []
     for idx, chunk in enumerate(chunks, 1):
+        if chunk[0][0] == "P":
+            audio.append(silence(float(chunk[0][1])))
+            continue
         body = {
             "inputs": [{"text": t, "voice_id": voice[s]} for s, t in chunk],
             "model_id": model_id,
@@ -379,7 +402,7 @@ def generate_episode(key, cfg, ep, model_id):
         if part.exists():
             print(f"    chunk {idx}/{len(chunks)} cached")
         else:
-            print(f"    chunk {idx}/{len(chunks)} ({sum(len(t) for _, t in chunk)} chars)...",
+            print(f"    chunk {idx}/{len(chunks)} ({spoken_chars(chunk)} chars)...",
                   flush=True)
             data, _ = api(key, "POST", "/v1/text-to-dialogue", body=body,
                                 query={"output_format": OUTPUT_FORMAT}, raw=True)
@@ -501,9 +524,9 @@ def main():
                   f"   Host B: {cfg['host_b']['name'] or cfg['host_b']['voice_id']}\n")
             total = 0
             for ep in todo:
-                chars = sum(len(t) for _, t in ep["turns"])
+                chars = spoken_chars(ep["turns"])
                 total += chars
-                print(f"  {ep['slug']:<32} {chars:>7,} chars  {len(chunk_turns(ep['turns'])):>3} chunks")
+                print(f"  {ep['slug']:<32} {chars:>7,} chars  {sum(c[0][0] != 'P' for c in chunk_turns(ep['turns'])):>3} chunks")
             credits = int(total * mult)
             print(f"\n  Total: {total:,} characters  ≈ {credits:,} credits "
                   f"(at {mult:g} credit/char)")

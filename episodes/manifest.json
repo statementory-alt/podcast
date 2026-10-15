@@ -1,1 +1,27 @@
-{}
+{
+  "polisci-01-politics": {
+    "published": "Thu, 15 Oct 2026 13:25:26 GMT",
+    "size": 19072308,
+    "duration": 1192.0195918357088
+  },
+  "polisci-05-dlu1-arendt": {
+    "published": "Thu, 15 Oct 2026 14:25:56 GMT",
+    "size": 8932097,
+    "duration": 558.3412244897966
+  },
+  "polisci-04-institutions": {
+    "published": "Thu, 15 Oct 2026 14:23:21 GMT",
+    "size": 8268169,
+    "duration": 516.8848979592515
+  },
+  "polisci-03-ideology": {
+    "published": "Thu, 15 Oct 2026 14:21:04 GMT",
+    "size": 8605596,
+    "duration": 537.9395918367684
+  },
+  "polisci-02-power": {
+    "published": "Thu, 15 Oct 2026 14:18:33 GMT",
+    "size": 7673599,
+    "duration": 479.71265306128225
+  }
+}
