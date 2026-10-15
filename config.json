@@ -5,13 +5,13 @@
   "language": "en",
   "base_url": "https://statementory-alt.github.io/podcast",
   "host_a": {
-    "name": "Quentin - Narrator and Educator",
-    "voice_id": "Aa6nEBJJMKJwJkCx8VU2"
+    "name": "Chris - Charming, Down-to-Earth",
+    "voice_id": "iP95p4xoKVk53GoZ742B"
   },
   "host_b": {
-    "name": "Vanessa Voyce - Warm & Relatable",
-    "voice_id": "9BYUod15YOH2aePSd97v"
+    "name": "Laura - Enthusiast, Quirky Attitude",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5"
   },
   "model_id": "",
-  "stability": 0.5
+  "stability": 0.0
 }

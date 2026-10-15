@@ -10,49 +10,6 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:block>Yes</itunes:block>
-    <item>
-      <title>Episode 1 · What Is Politics?</title>
-      <description>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</description>
-      <itunes:summary>Lecture 1 of Political Science A. The need for politics, polity/politics/policy, Heywood&#x27;s and Patzelt&#x27;s definitions, the PINC and AGIL schemes, what makes political science a science, its four research challenges, and climate politics as the course&#x27;s running case. Includes the course logistics, the term challenge and a quiz.</itunes:summary>
-      <itunes:episode>1</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>0:19:52</itunes:duration>
-      <enclosure url="https://statementory-alt.github.io/podcast/episodes/polisci-01-politics.mp3" length="19072308" type="audio/mpeg"/>
-      <guid isPermaLink="false">polisci-01-politics</guid>
-      <pubDate>Thu, 15 Oct 2026 13:25:26 GMT</pubDate>
-    </item>
-    <item>
-      <title>Voice sample A · Chris and Laura</title>
-      <description>One-minute voice test. Same text in all three samples; pick the pair you like best.</description>
-      <itunes:summary>One-minute voice test. Same text in all three samples; pick the pair you like best.</itunes:summary>
-      <itunes:episode>0</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>0:01:07</itunes:duration>
-      <enclosure url="https://statementory-alt.github.io/podcast/episodes/sample-a.mp3" length="1069557" type="audio/mpeg"/>
-      <guid isPermaLink="false">sample-a</guid>
-      <pubDate>Thu, 15 Oct 2026 13:40:52 GMT</pubDate>
-    </item>
-    <item>
-      <title>Voice sample B · Liam and Jessica</title>
-      <description>One-minute voice test. Same text in all three samples; pick the pair you like best.</description>
-      <itunes:summary>One-minute voice test. Same text in all three samples; pick the pair you like best.</itunes:summary>
-      <itunes:episode>0</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>0:01:18</itunes:duration>
-      <enclosure url="https://statementory-alt.github.io/podcast/episodes/sample-b.mp3" length="1248444" type="audio/mpeg"/>
-      <guid isPermaLink="false">sample-b</guid>
-      <pubDate>Thu, 15 Oct 2026 13:41:13 GMT</pubDate>
-    </item>
-    <item>
-      <title>Voice sample C · Will and Matilda</title>
-      <description>One-minute voice test. Same text in all three samples; pick the pair you like best.</description>
-      <itunes:summary>One-minute voice test. Same text in all three samples; pick the pair you like best.</itunes:summary>
-      <itunes:episode>0</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>0:01:15</itunes:duration>
-      <enclosure url="https://statementory-alt.github.io/podcast/episodes/sample-c.mp3" length="1198706" type="audio/mpeg"/>
-      <guid isPermaLink="false">sample-c</guid>
-      <pubDate>Thu, 15 Oct 2026 13:41:33 GMT</pubDate>
-    </item>
+
   </channel>
 </rss>
