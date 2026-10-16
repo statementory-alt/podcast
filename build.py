@@ -25,6 +25,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -415,7 +416,52 @@ def hms(sec):
 
 # ---------------------------------------------------------------- generation
 
+def generate_fish_per_turn(key, cfg, ep):
+    """One request per spoken turn, with a short silence between turns so the hosts don't run on."""
+    fc = cfg["fish"]
+    voices = {"A": fc["voices"][0], "B": fc["voices"][1]}
+    model, speed, gap = fc.get("model", "s2-pro"), fc.get("speed", 1.0), fc.get("turn_gap", 1.0)
+    part_dir = PARTS_DIR / ep["slug"]
+    part_dir.mkdir(parents=True, exist_ok=True)
+    segments = []  # ("P", seconds) or (speaker, text)
+    for spk, text in ep["turns"]:
+        segments += [(spk, text)] if spk == "P" else [(spk, t) for t in split_long(text, CHUNK_LIMIT)]
+
+    def part_path(i, spk, text):
+        h = hashlib.sha1(json.dumps([voices[spk], text, model, speed]).encode()).hexdigest()[:12]
+        return part_dir / f"t{i:04d}-{h}.mp3"
+
+    jobs = [(i, s, t) for i, (s, t) in enumerate(segments) if s != "P"]
+    todo = [j for j in jobs if not part_path(*j).exists()]
+    print(f"    {len(jobs)} turns, {len(jobs) - len(todo)} cached", flush=True)
+
+    def run(job):
+        i, s, t = job
+        part_path(i, s, t).write_bytes(fish_tts(key, t, voices[s], model, speed))
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for n, _ in enumerate(pool.map(run, todo), 1):
+            if n % 20 == 0:
+                print(f"    {n}/{len(todo)} turns generated", flush=True)
+
+    audio, prev_speech = [], False
+    for i, (s, t) in enumerate(segments):
+        if s == "P":
+            audio.append(silence(float(t)))
+            prev_speech = False
+            continue
+        if prev_speech:
+            audio.append(silence(gap))
+        audio.append(strip_tags(part_path(i, s, t).read_bytes()))
+        prev_speech = True
+    out = EPISODES_DIR / f"{ep['slug']}.mp3"
+    out.write_bytes(b"".join(audio))
+    return out
+
+
 def generate_episode(key, cfg, ep, model_id):
+    if cfg.get("provider") == "fish" and cfg["fish"].get("per_turn"):
+        return generate_fish_per_turn(key, cfg, ep)
     voice = {"A": ep.get("voice_a") or cfg["host_a"]["voice_id"],
              "B": ep.get("voice_b") or cfg["host_b"]["voice_id"]}
     stability = ep["stability"] if ep.get("stability") is not None else cfg.get("stability", 0.5)
