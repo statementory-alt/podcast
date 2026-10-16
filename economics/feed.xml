@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economics A · Study Podcast</title>
+    <link>https://statementory-alt.github.io/podcast/economics</link>
+    <atom:link href="https://statementory-alt.github.io/podcast/economics/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Two-host study episodes for Economics A / Microeconomics (HSG, Autumn 2026), chapter by chapter, with pauses to answer.</description>
+    <language>en</language>
+    <itunes:author>Adrián</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>Episode 5 · Normative Economics</title>
+      <description>Chapter 5 of Economics A (Microeconomics), explained step by step. Efficiency in production and consumption, Pareto efficiency and Pareto improvements with the grades and money examples, the main critique of Pareto, consumer and producer surplus and aggregate rent, the first and second theorems of welfare economics and their limits, consequentialism, deontology and virtue ethics, welfarism, reflective equilibrium, and revealed preference. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Chapter 5 of Economics A (Microeconomics), explained step by step. Efficiency in production and consumption, Pareto efficiency and Pareto improvements with the grades and money examples, the main critique of Pareto, consumer and producer surplus and aggregate rent, the first and second theorems of welfare economics and their limits, consequentialism, deontology and virtue ethics, welfarism, reflective equilibrium, and revealed preference. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>5</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:14:42</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/economics/episodes/econ-05-normative-economics.mp3" length="14104237" type="audio/mpeg"/>
+      <guid isPermaLink="false">econ-05-normative-economics</guid>
+      <pubDate>Fri, 16 Oct 2026 09:10:57 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 4 · Demand and Supply</title>
+      <description>Chapter 4 of Economics A (Microeconomics), explained step by step. What determines demand, individual and market demand (adding up horizontally), ordinary, Giffen, normal and inferior goods, substitutes and complements, movement along versus shift of the curve, what determines supply, four kinds of capital, market supply, the market equilibrium with a worked example, the four shift rules, and consumer and producer surplus. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Chapter 4 of Economics A (Microeconomics), explained step by step. What determines demand, individual and market demand (adding up horizontally), ordinary, Giffen, normal and inferior goods, substitutes and complements, movement along versus shift of the curve, what determines supply, four kinds of capital, market supply, the market equilibrium with a worked example, the four shift rules, and consumer and producer surplus. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:14:34</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/economics/episodes/econ-04-demand-and-supply.mp3" length="13981789" type="audio/mpeg"/>
+      <guid isPermaLink="false">econ-04-demand-and-supply</guid>
+      <pubDate>Fri, 16 Oct 2026 09:10:22 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 3 · Markets and Institutions</title>
+      <description>Chapter 3 of Economics A (Microeconomics), explained step by step. The physical and legal side of every transaction, the institutions a market needs (property rights, contract law, enforcement, self-ownership), the Lex Mercatoria, barter versus money, the three functions of money, the nine market structures, polypoly, monopoly, oligopoly, bilateral monopoly and monopolistic competition, and what determines market structure. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Chapter 3 of Economics A (Microeconomics), explained step by step. The physical and legal side of every transaction, the institutions a market needs (property rights, contract law, enforcement, self-ownership), the Lex Mercatoria, barter versus money, the three functions of money, the nine market structures, polypoly, monopoly, oligopoly, bilateral monopoly and monopolistic competition, and what determines market structure. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:12:16</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/economics/episodes/econ-03-markets-and-institutions.mp3" length="11767650" type="audio/mpeg"/>
+      <guid isPermaLink="false">econ-03-markets-and-institutions</guid>
+      <pubDate>Fri, 16 Oct 2026 09:09:23 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 2 · Gains from Trade</title>
+      <description>Chapter 2 of Economics A (Microeconomics), explained step by step. Absolute versus comparative advantage, how to calculate opportunity costs, the Anna and Ben pizza-and-salad example, autarky, why specialisation and trade create gains, concave and convex frontiers, who wins and loses from integration, vulnerability and hold-up, alienation, and institutions. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Chapter 2 of Economics A (Microeconomics), explained step by step. Absolute versus comparative advantage, how to calculate opportunity costs, the Anna and Ben pizza-and-salad example, autarky, why specialisation and trade create gains, concave and convex frontiers, who wins and loses from integration, vulnerability and hold-up, alienation, and institutions. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:12:07</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/economics/episodes/econ-02-gains-from-trade.mp3" length="11631187" type="audio/mpeg"/>
+      <guid isPermaLink="false">econ-02-gains-from-trade</guid>
+      <pubDate>Fri, 16 Oct 2026 09:08:49 GMT</pubDate>
+    </item>
+    <item>
+      <title>Episode 1 · First Principles</title>
+      <description>Chapter 1 of Economics A (Microeconomics), explained step by step. Scarcity and opportunity cost, the three levels of analysis, methodological individualism and homo oeconomicus, why theories can never be proven (the Münchhausen trilemma), models and Ockham&#x27;s razor, critical rationalism, the production-possibility frontier, positive versus normative statements, and the main schools of thought. Quiz questions have pauses so you can answer.</description>
+      <itunes:summary>Chapter 1 of Economics A (Microeconomics), explained step by step. Scarcity and opportunity cost, the three levels of analysis, methodological individualism and homo oeconomicus, why theories can never be proven (the Münchhausen trilemma), models and Ockham&#x27;s razor, critical rationalism, the production-possibility frontier, positive versus normative statements, and the main schools of thought. Quiz questions have pauses so you can answer.</itunes:summary>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>0:15:36</itunes:duration>
+      <enclosure url="https://statementory-alt.github.io/podcast/economics/episodes/econ-01-first-principles.mp3" length="14968629" type="audio/mpeg"/>
+      <guid isPermaLink="false">econ-01-first-principles</guid>
+      <pubDate>Fri, 16 Oct 2026 09:07:36 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

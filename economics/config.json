@@ -1,0 +1,32 @@
+{
+  "podcast_title": "Economics A · Study Podcast",
+  "podcast_description": "Two-host study episodes for Economics A / Microeconomics (HSG, Autumn 2026), chapter by chapter, with pauses to answer.",
+  "author": "Adrián",
+  "language": "en",
+  "base_url": "https://statementory-alt.github.io/podcast/economics",
+  "host_a": {
+    "name": "Chris - Charming, Down-to-Earth",
+    "voice_id": "iP95p4xoKVk53GoZ742B"
+  },
+  "host_b": {
+    "name": "Laura - Enthusiast, Quirky Attitude",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "model_id": "",
+  "stability": 0.0,
+  "provider": "fish",
+  "fish": {
+    "model": "s2-pro",
+    "voices": [
+      "536d3a5e000945adb7038665781a4aca",
+      "933563129e564b19a115bedd57b7406a"
+    ],
+    "names": [
+      "Ethan",
+      "Sarah"
+    ],
+    "speed": 1.0,
+    "per_turn": true,
+    "turn_gap": 1.0
+  }
+}
