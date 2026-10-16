@@ -1,165 +1,385 @@
 ---
 title: Episode 5 · Strategy II · Resources and Capabilities
-description: Lecture 4 of Business Administration A. Why profits differ within one industry, the market-based versus resource-based view, tangible and intangible resources, Porter's value chain, VRIN and the competitive analysis, the knowledge-based view and tacit knowledge, dynamic capabilities (sensing, seizing, reconfiguring), absorptive capacity, SWOT, and how much industry versus firm explains performance. Quiz questions have pauses so you can answer.
+description: Lecture 4 of Business Administration A, explained step by step. Why profits differ inside one industry, the market-based versus resource-based view, tangible and intangible resources, Porter's value chain, VRIN and the step-by-step competitive analysis, explicit and tacit knowledge, dynamic capabilities (sensing, seizing, reconfiguring), absorptive capacity, the four SWOT questions, and how much industry versus firm explains performance. Quiz questions have pauses so you can answer.
 episode: 5
 ---
 
 # Episode 5 · Strategy II · Resources and Capabilities
 
-HOST A: [warmly] Welcome to episode five! Strategy, part two. Lecture four: "Navigating organizations".
+HOST A: [curious] Last episode, we learned that some industries make more money than others. So here's the follow-up question.
 
-HOST B: [curious] Last time, the five forces explained why some industries make more money. So what's left?
+HOST B: Go on.
 
-HOST A: This. Even inside the same industry, profits are wildly different. The slide showed pharma companies. Novo Nordisk, Gilead and Eli Lilly were at the top with very high operating margins. Others in the same industry, like the big drug wholesalers, earned only a few percent.
+HOST A: If two companies are in exactly the same industry, same customers, same suppliers, same competitors... why does one earn a fortune, and the other almost nothing?
 
-HOST B: [surprised] Same industry, totally different results.
+HOST B: [thoughtfully] Hmm. The five forces should be the same for both.
 
-HOST A: Exactly. So the industry can't explain everything. We need to look inside the firm.
+HOST A: Exactly. So the five forces can't be the whole story. Today, we look inside the company.
 
-HOST B: Two views, right?
+HOST B: Welcome back to the Business Administration study podcast. Episode five: strategy, part two.
 
-HOST A: Yes. The market-based view, from Michael Porter and industrial economics: industry structure leads to competitive advantage, which leads to performance. Looking from the outside in.
+PAUSE: 1
 
-HOST B: And the other?
+HOST A: Here's the plan. First, two ways of looking at strategy: from the outside, or from the inside. Then, what a company's resources are. Then VRIN, the famous test for a lasting advantage. Then knowledge, and dynamic capabilities. Then a special way to use SWOT. And finally, some numbers on what really drives profits.
 
-HOST A: The resource-based view, the RBV, linked to Jay Barney: a firm's resources and capabilities lead to competitive advantage, which leads to performance. Looking from the inside out.
+PAUSE: 1
 
-HOST B: There was a nice line about the RBV.
+HOST B: Let's start with the evidence. The lecture shows pharma companies, between 2021 and 2025.
 
-HOST A: [laughs] "It's like building a castle with stones only you have." The RBV says a firm's unique resources and capabilities are the key to getting and keeping a competitive advantage. Things like patents, brand reputation, and the way the organisation works.
+HOST A: Same industry.
 
-HOST B: What counts as a resource?
+HOST B: Same industry. Novo Nordisk, Gilead and Eli Lilly at the top, with very high profit margins. And drug wholesalers like McKesson and Cardinal Health at the bottom, earning only a few percent.
 
-HOST A: Two kinds. Tangible resources: current assets like cash, fixed assets like machines, and real estate and buildings. And intangible resources: personnel, technological ones like intellectual property, organisational ones like routines and processes, and relational ones like networks and relationships.
+HOST A: So the industry alone doesn't explain it.
 
-HOST B: Quick check for the listener. A company's strong relationships with key partners. Tangible or intangible, and which type?
+HOST B: Exactly.
 
-PAUSE: 6
+PAUSE: 2
 
-HOST A: Intangible, and relational.
+HOST A: So, two views of strategy.
 
-HOST B: The RBV rests on two assumptions, right?
+HOST B: The first is the market-based view. It comes from Michael Porter and industrial economics. The logic is: the structure of the industry creates the competitive advantage, and that drives performance.
 
-HOST A: Yes. For the RBV, a firm is a unique bundle of resources, capabilities, and core competencies. Assumption one: resource heterogeneity. Firms have different mixes of resources and skills, even in the same industry. Assumption two: resource immobility. Key resources don't move easily from one firm to another, especially sticky things like brand or culture.
+HOST A: That's what we did last time. Looking from the outside in.
 
-HOST B: Heterogeneity and immobility. Different, and hard to move.
+HOST B: Exactly. The second is the resource-based view, the RBV. It's linked to Jay Barney. The logic is: the company's own resources and capabilities create the competitive advantage, and that drives performance.
 
-HOST A: Perfect summary. Then Porter's value chain, from 1985. It shows how a firm transforms resources into an advantage, either a cost advantage or a quality advantage.
+HOST A: Looking from the inside out.
 
-HOST B: What's in the chain?
+HOST B: Perfect.
 
-HOST A: Primary activities, in order: inbound logistics, operations, outbound logistics, sales and marketing, and service and support. And support activities that run across all of them: firm infrastructure, meaning general management, human resource management, technology development, and procurement.
+PAUSE: 1
 
-HOST B: Pause and try. Name the five primary activities of the value chain.
+HOST A: There was a nice line on the slide.
+
+HOST B: [laughs] Yes. The RBV is "like building a castle with stones only you have".
+
+HOST A: I like that. If nobody else has your stones, nobody can build your castle.
+
+HOST B: Exactly. Things like patents, a famous brand, or the special way a company works together.
+
+PAUSE: 2
+
+HOST A: So what exactly counts as a resource?
+
+HOST B: Two kinds. First, tangible resources: things you can touch.
+
+HOST A: Like?
+
+HOST B: Current assets, like cash. Fixed assets, like machines and equipment. And real estate and buildings.
+
+HOST A: And the second kind?
+
+HOST B: Intangible resources: things you can't touch. Let's go slowly, there are four.
+
+HOST A: Okay.
+
+HOST B: Personnel: the people and their skills. Technological: things like patents and intellectual property. Organisational: routines and processes, the way things get done. And relational: networks and relationships with partners and customers.
+
+PAUSE: 1
+
+HOST A: Quick check. A company's strong relationships with its key partners. Tangible or intangible? And which type?
+
+PAUSE: 7
+
+HOST B: Intangible, and relational.
+
+PAUSE: 1
+
+HOST A: And the RBV rests on two assumptions.
+
+HOST B: Yes. For the RBV, every company is a unique bundle of resources, capabilities and core competences.
+
+HOST A: Like a fingerprint.
+
+HOST B: Nice. Assumption one: resource heterogeneity. That just means: companies are different. Even in the same industry, each one has a different mix of resources and skills.
+
+HOST A: And two?
+
+HOST B: Resource immobility. Key resources don't move easily from one company to another. Especially sticky things, like a brand or a company culture. You can't just buy Apple's culture.
+
+HOST A: [laughs] Right. So: companies are different, and their resources stay put.
+
+HOST B: Exactly.
+
+PAUSE: 2
+
+HOST A: Then Porter's value chain.
+
+HOST B: Yes, from 1985. It shows how a company turns resources into an advantage, either a cost advantage or a quality advantage.
+
+HOST A: What's in the chain?
+
+HOST B: Two kinds of activities. First, the primary activities. They follow the product from start to finish. Let's go slowly.
+
+HOST A: Okay.
+
+HOST B: Inbound logistics: getting materials in. Operations: making the product. Outbound logistics: getting it out to customers. Sales and marketing: selling it. And service: helping customers afterwards.
+
+HOST A: In, make, out, sell, service.
+
+HOST B: Nice way to remember it. And then there are support activities that run across all of them.
+
+HOST A: Which are?
+
+HOST B: The firm's infrastructure, meaning general management. Human resource management. Technology development. And procurement, meaning buying.
+
+PAUSE: 1
+
+HOST A: Your turn, listener. Name the five primary activities.
+
+PAUSE: 10
+
+HOST B: Inbound logistics, operations, outbound logistics, sales and marketing, and service.
+
+PAUSE: 2
+
+HOST A: Okay. Now the big one. VRIN.
+
+HOST B: This is from Jay Barney, 1991. And it's a favourite in exams.
+
+HOST A: Let's go very slowly.
+
+HOST B: VRIN asks: when does a resource give you a lasting advantage? And the answer is: when it's Valuable, Rare, Inimitable, and Non-substitutable.
+
+HOST A: One by one.
+
+HOST B: Valuable: it has features that customers really want.
+
+HOST A: Okay.
+
+HOST B: Rare: only a few companies have it, or you can control who gets access.
+
+HOST A: Inimitable?
+
+HOST B: That means hard to copy. It's expensive or difficult to imitate, and you can't just build it or buy it on the market.
+
+HOST A: And non-substitutable?
+
+HOST B: Nothing else can give the same benefit. There's no equivalent alternative.
+
+PAUSE: 2
+
+HOST A: And there's a step-by-step test.
+
+HOST B: Yes. You ask the four questions in order, and you stop at the first "no".
+
+HOST A: Okay.
+
+HOST B: Is it valuable? If no: competitive disadvantage.
+
+HOST A: Makes sense.
+
+HOST B: Valuable, but is it rare? If no: competitive parity. You're just like everyone else.
+
+HOST A: Okay.
+
+HOST B: Valuable and rare, but is it hard to copy? If no: a temporary competitive advantage. You're ahead, until others copy you.
+
+HOST A: And if it can be replaced by something else?
+
+HOST B: Also only temporary.
+
+HOST A: And if all four are yes?
+
+HOST B: A sustainable competitive advantage. That's the goal.
+
+PAUSE: 2
+
+HOST A: Let me quiz our listener. A resource is valuable and rare, but competitors can copy it within a year. What kind of advantage is that?
 
 PAUSE: 8
 
-HOST A: Inbound logistics, operations, outbound logistics, sales and marketing, and service.
+HOST B: A temporary competitive advantage.
 
-HOST B: Okay, now the big one. VRIN.
+HOST A: And if it's valuable, but every competitor has it too?
 
-HOST A: Yes, from Barney, 1991. A resource gives a competitive advantage when it's Valuable, Rare, Inimitable, and Non-substitutable.
+PAUSE: 7
 
-HOST B: Explain each one simply.
+HOST B: Competitive parity.
 
-HOST A: Valuable: it has attractive features that are in demand. Rare: only a few firms have it or control access to it. Inimitable: it's expensive or hard to copy, and you can't just build it or buy it on the market. Non-substitutable: nothing else offers the same strategic value.
+PAUSE: 2
 
-HOST B: And there's a step-by-step test.
+HOST A: Next: the knowledge-based view.
 
-HOST A: Yes, and it's an exam favourite. You go through the questions in order. Not valuable? Competitive disadvantage. Valuable but not rare? Competitive parity, you're just like everyone else. Valuable and rare, but easy to imitate? A temporary competitive advantage. Valuable, rare, inimitable, but substitutable? Still only temporary.
+HOST B: From Robert Grant, 1996. It says the most important resource of all is knowledge.
 
-HOST B: And all four?
+HOST A: And the challenge is...
 
-HOST A: A sustainable competitive advantage.
+HOST B: Coordinating that knowledge inside the company, or between companies, and the cost of passing it on.
 
-HOST B: Let me quiz the listener. A resource is valuable and rare, but competitors can copy it within a year. What kind of advantage is that?
+PAUSE: 1
 
-PAUSE: 6
+HOST A: And there are two kinds of knowledge.
 
-HOST A: A temporary competitive advantage.
+HOST B: Yes. Explicit knowledge: it can be written down, formalised, and easily shared. Like a recipe, or a manual.
 
-HOST B: And if it's valuable but every competitor has it?
+HOST A: And tacit?
 
-PAUSE: 5
+HOST B: Tacit knowledge is personal, based on experience, and rooted in practice and routines. It's very hard to write down.
 
-HOST A: Competitive parity.
+HOST A: Like riding a bike.
 
-HOST B: Next: the knowledge-based view.
+HOST B: Perfect example. You can read a manual about riding a bike, but that won't teach you.
 
-HOST A: From Grant, 1996. It says the most important strategic resource is knowledge. And it's about the problem of coordinating knowledge inside a firm, or between firms, and the costs of transferring it.
+HOST A: And that's why tacit knowledge is so valuable for strategy.
 
-HOST B: And there are two kinds of knowledge.
+HOST B: Exactly. It's hard to copy.
 
-HOST A: Explicit knowledge: it can be written down, formalised, and easily shared. Like a manual. Tacit knowledge: personal, based on experience, deeply rooted in action and routines. Like how an expert chef just "knows" when a sauce is right.
+PAUSE: 1
 
-HOST B: [thoughtfully] And tacit knowledge is hard to copy.
+HOST A: And the lecture used "Moneyball".
 
-HOST A: Exactly, which makes it a great source of advantage. The example was "Moneyball": the Oakland A's baseball team, with manager Billy Beane, used data analysis to find undervalued players, and competed with teams that had far bigger budgets.
+HOST B: Yes. The Oakland A's baseball team, with manager Billy Beane, had a tiny budget. So they used data and statistics to find good players that other teams had overlooked. And they competed with much richer teams.
 
-HOST B: There was a little philosophy puzzle in the break.
+HOST A: So knowledge beat money.
 
-HOST A: [laughs] The Ship of Theseus! If you replace every plank of a ship one by one, is it still the same ship? It's a nice way into the next idea: firms constantly replace their parts, but stay themselves.
+HOST B: That's the story.
 
-HOST B: Dynamic capabilities!
+PAUSE: 2
 
-HOST A: Yes. From Teece and colleagues, 1997. [slowly] Dynamic capability is the firm's ability to integrate, build, and reconfigure internal and external competences to address rapidly changing environments.
+HOST A: There was a philosophy puzzle in the break.
 
-HOST B: So it's not a resource, it's the ability to change your resources.
+HOST B: [laughs] The Ship of Theseus. If you replace every plank of a ship, one by one, over the years, is it still the same ship?
 
-HOST A: Exactly. A meta-competence. It has three parts. Sensing: spotting opportunities and threats outside the firm. Seizing: grabbing them with new business models or investments. And reconfiguring: reorganising the firm's assets and structures.
+HOST A: Hmm.
 
-HOST B: Sensing, seizing, reconfiguring.
+HOST B: It's a nice way into the next idea. Companies constantly replace their parts, their people, their products. But they stay themselves, and they need to keep renewing.
 
-HOST A: And the basis for all this is absorptive capacity, from Cohen and Levinthal, 1990. It's a firm's ability to recognise the value of new external information. It has four steps: acquire, assimilate, transform, and exploit.
+PAUSE: 1
 
-HOST B: And it's self-reinforcing.
+HOST A: Dynamic capabilities.
 
-HOST A: Right. The more you learn, the easier it gets to learn more.
+HOST B: Yes. From Teece and colleagues, 1997. Here's the definition. [slowly] Dynamic capability is the firm's ability to integrate, build, and reconfigure internal and external competences to address rapidly changing environments.
 
-HOST B: Pause time. What are the three parts of dynamic capabilities?
+PAUSE: 2
 
-PAUSE: 6
+HOST A: In simple words?
 
-HOST A: Sensing, seizing, and reconfiguring.
+HOST B: It's not a resource itself. It's the ability to change your resources when the world changes.
 
-HOST B: Then SWOT. Everyone knows SWOT. But the lecture used it in a special way.
+HOST A: A skill about skills.
 
-HOST A: Yes. You cross the firm's resources and capabilities, which are internal and current, with industry and environmental developments, which are external and future. That gives four questions.
+HOST B: Exactly. The lecture calls it a meta-competence. And it has three parts.
 
-HOST B: Go.
+HOST A: Slowly.
 
-HOST A: Strengths and opportunities: which resources can we defend against competitors in the long run? Strengths and threats: which of our key resources could competitors copy or replace? Weaknesses and opportunities: which critical resources are we missing that we could build or buy? And weaknesses and threats: which critical resources do competitors have, that we depend on but can't access?
+HOST B: Sensing: noticing opportunities and threats outside the company.
 
-HOST B: And the lecture ends with numbers.
+HOST A: Like radar.
 
-HOST A: Yes. How much of a firm's performance comes from the industry, and how much from the firm itself? Rumelt in 1991 found industry explained about eight percent and the firm about forty-six percent. McGahan and Porter in 1997: industry about nineteen, firm about thirty-two. And Eshraghi and Vanneste in 2026: industry about twenty-five, firm about forty-six.
+HOST B: Seizing: grabbing those opportunities, with new business models or investments.
 
-HOST B: So the firm always explains more.
+HOST A: And three?
 
-HOST A: Yes, firm characteristics explain the biggest share. But the newest paper adds a twist: how you classify industries matters. If you group really similar firms together, using machine learning instead of old industry codes, the industry effect gets stronger.
+HOST B: Reconfiguring: reorganising the company's assets and structures to fit the new situation.
 
-HOST B: So both matter.
+HOST A: Sensing, seizing, reconfiguring.
 
-HOST A: Exactly, and that's the punchline. A competitive advantage comes from internal resources that are hard to copy. Dynamic capabilities let firms renew their advantages by sensing, seizing and reconfiguring. And both industry and firm characteristics influence profitability.
+PAUSE: 2
 
-HOST B: Final quiz! What does VRIN stand for?
+HOST A: And what makes dynamic capabilities possible?
 
-PAUSE: 6
+HOST B: Absorptive capacity. From Cohen and Levinthal, 1990. It's a company's ability to recognise the value of new information from outside.
+
+HOST A: And it has steps.
+
+HOST B: Four: acquire, assimilate, transform, and exploit. Get the knowledge, understand it, adapt it, and use it.
+
+HOST A: And it's self-reinforcing.
+
+HOST B: Right. The more you learn, the easier it is to learn more.
+
+PAUSE: 1
+
+HOST A: Quick check. What are the three parts of dynamic capabilities?
+
+PAUSE: 7
+
+HOST B: Sensing, seizing, and reconfiguring.
+
+PAUSE: 2
+
+HOST A: Next, SWOT. Everyone knows SWOT. But the lecture uses it in a special way.
+
+HOST B: Yes. You cross two things. On one side, the company's resources and capabilities: that's internal, and about now. On the other side, developments in the industry and environment: external, and about the future.
+
+HOST A: That gives four combinations.
+
+HOST B: Four questions. Let's go slowly.
+
+HOST A: Strengths with opportunities.
+
+HOST B: Which of our resources can we defend against competitors in the long run?
+
+HOST A: Strengths with threats.
+
+HOST B: Which of our key resources could competitors copy or replace?
+
+HOST A: Weaknesses with opportunities.
+
+HOST B: Which important resources are we missing, that we could build or buy?
+
+HOST A: And weaknesses with threats.
+
+HOST B: Which important resources do competitors have, that we depend on but can't get?
+
+PAUSE: 2
+
+HOST A: And the lecture ends with numbers.
+
+HOST B: Yes. The question: how much of a company's performance comes from its industry, and how much from the company itself?
+
+HOST A: And?
+
+HOST B: Three studies. Rumelt, in 1991: industry explained about eight percent, the company about forty-six percent.
+
+HOST A: Wow, the company is much bigger.
+
+HOST B: McGahan and Porter, in 1997: industry about nineteen percent, company about thirty-two percent. And Eshraghi and Vanneste, in 2026: industry about twenty-five percent, company about forty-six percent.
+
+HOST A: So the company always explains more.
+
+HOST B: Always. But the newest study adds a twist. If you group industries more precisely, using machine learning instead of old industry codes, the industry effect gets stronger.
+
+HOST A: So both matter.
+
+HOST B: Exactly. And that's the punchline.
+
+PAUSE: 2
+
+HOST A: Let's wrap up.
+
+HOST B: One: the market-based view looks from the outside in, the resource-based view from the inside out. Two: resources can be tangible or intangible, and they're different across companies, and hard to move.
+
+HOST A: Three: VRIN. A resource gives a lasting advantage only if it's valuable, rare, inimitable and non-substitutable. Four: dynamic capabilities, meaning sensing, seizing and reconfiguring, let a company renew its advantages. And five: both the industry and the company matter, but the company matters more.
+
+PAUSE: 2
+
+HOST B: Final quiz. What does VRIN stand for?
+
+PAUSE: 7
 
 HOST A: Valuable, rare, inimitable, non-substitutable.
 
 HOST B: What's the difference between the market-based and the resource-based view?
 
-PAUSE: 8
+PAUSE: 10
 
-HOST A: Market-based: the industry structure drives advantage, from the outside in. Resource-based: the firm's own resources and capabilities drive advantage, from the inside out.
+HOST A: Market-based: the industry structure drives the advantage, from the outside in. Resource-based: the company's own resources drive it, from the inside out.
 
-HOST B: Explicit or tacit: how to ride a bike?
+HOST B: Is knowing how to ride a bike explicit or tacit knowledge?
 
-PAUSE: 5
+PAUSE: 6
 
 HOST A: Tacit. It's hard to write down.
 
-HOST B: [warmly] Nice. Next time: innovation. Lego almost went bankrupt, and then became one of the most successful toy companies in the world. We'll see how.
+HOST B: And what are the four steps of absorptive capacity?
+
+PAUSE: 8
+
+HOST A: Acquire, assimilate, transform, and exploit.
+
+HOST B: [warmly] Great work. Next time: innovation. Lego almost went bankrupt, and then became one of the most successful toy companies in the world. We'll see how.
 
 HOST A: See you there!
